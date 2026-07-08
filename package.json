@@ -1,0 +1,53 @@
+{
+  "name": "truecaller-api",
+  "version": "3.0.0",
+  "description": "Modern Truecaller phone number lookup API — configurable clientSecret, updated dependencies, for Node.js/TypeScript.",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/index.js",
+  "types": "./typings/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./typings/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "bin": {
+    "truecaller-api": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "rm -rf ./dist && tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marwangpt237/Truecaller-api.git"
+  },
+  "keywords": ["truecaller","phone","caller-id","search","lookup","truecallerjs"],
+  "author": "marwangpt237",
+  "license": "MIT",
+  "bugs": {"url": "https://github.com/marwangpt237/Truecaller-api/issues"},
+  "homepage": "https://github.com/marwangpt237/Truecaller-api#readme",
+  "dependencies": {
+    "awesome-phonenumber": "^7.2.0",
+    "axios": "^1.7.0",
+    "chalk": "^5.4.0",
+    "inquirer": "^12.4.0",
+    "json-colorizer": "^2.2.2",
+    "json-to-plain-text": "^1.1.2",
+    "json-to-pretty-yaml": "^1.2.2",
+    "xml2js": "^0.6.2",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^22.10.0",
+    "@types/xml2js": "^0.4.14",
+    "@types/yargs": "^17.0.33",
+    "jest": "^30.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
