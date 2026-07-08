@@ -40,3 +40,5 @@ const truecallerjs = {
 };
 
 export default truecallerjs;
+
+export { apifyPhoneLookup } from "./apify-search.js";
